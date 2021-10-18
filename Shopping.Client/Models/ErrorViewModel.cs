@@ -1,4 +1,6 @@
-﻿namespace Shopping.Client.Models
+using System;
+
+namespace Shopping.Client.Models
 {
     public class ErrorViewModel
     {
