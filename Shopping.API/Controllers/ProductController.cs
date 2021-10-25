@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Shopping.API.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Shopping.API.Controllers
 {
@@ -12,6 +16,16 @@ namespace Shopping.API.Controllers
         public ProductController(ILogger<ProductController> logger)
         {
             _logger = logger;
+        }
+
+        [HttpGet]
+        public IEnumerable<Product> Get()
+        {
+            var rdg = new Random();
+            return Enumerable.Range(1, 5).Select(i => new Product
+            { 
+                Name = "asd"
+            }).ToArray();
         }
     }
 }
